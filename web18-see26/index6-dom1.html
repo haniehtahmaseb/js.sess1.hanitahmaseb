@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo">jucci</h1>
+    <ul>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+    </ul>
+    <h2>h2Tag</h2>
+    <div class="hani">Lorem ipsum dolor sit amet.</div>
+    <h2>h2Tag</h2>
+    <div class="hani">Lorem ipsum dolor sit amet.</div>
+    <script>
+        const sel = document.getElementById('demo')
+        let x = sel.innerText
+        console.log('before text is :' , x)
+        sel.innerText = 'changed text by Id...'
+
+        const myh2 = document.getElementsByTagName('h2')[0]
+        myh2.style.fontSize = '30px'
+        myh2.style.color = 'blue'
+
+        const myClass = document.getElementsByClassName('hani')[1]
+        console.log('before text is :' + myClass.innerHTML)
+        myClass.innerHTML = '<em>jucci</em>'
+
+        document.querySelector('ul>li:nth-of-type(1)').style.color = 'salmon'
+        const _li = document.querySelectorAll('ul>li')
+        _li[2].style.fontSize= "25px"
+
+
+
+
+    </script>
+</body>
+</html>
